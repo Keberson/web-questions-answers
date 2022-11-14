@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card p-3 gap-3">
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://randomwordgenerator.com/img/picture-generator/brushes-1683134_640.jpg" class="img-fluid rounded-start" alt="image: card">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <a href="#"><h5 class="card-title">How to build a moon park?</h5></a>
+                    <p class="card-text">Very very very important question!</p>
+                    <div class="row gap-3">
+                        <a href="#">answers (3)</a>
+                        <div class="d-flex gap-1">
+                            <p class="card-text"><small class="text-muted">Tags:</small></p>
+                            <a href="#" class="card-text"><small>black-jack</small></a>
+                            <a href="#" class="card-text"><small>bender</small></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 btn-group">
+                <input type="checkbox" class="btn-check" id="like_1" autocomplete="off">
+                <label class="btn btn-outline-danger rounded-0 rounded-end fs-2" for="like_1" id="like_1-label">
+                    &#9825;
+                    5
+                </label>
+            </div>
+        </div>
+    </div>
+    <hr class="hr hr-blurry" />
+    <div class="d-flex flex-column px-3 gap-3">
+        <ul class="list-group border-0">
+            <li class="list-group-item">
+                <div class="row g-0">
+                    <div class="col-md-4 p-3 d-flex justify-content-center">
+                        <img src="https://randomwordgenerator.com/img/picture-generator/brushes-1683134_640.jpg" class="img-fluid rounded" alt="image: card" style="max-height: 10rem">
+                    </div>
+                    <div class="col-md-8 d-flex flex-column justify-content-lg-around">
+                        <div class="card-body">
+                            <p class="card-text">Very very very important question!</p>
+                            <div class="d-flex gap-3 align-items-center">
+                                <button class="btn btn-primary">+</button>
+                                <p class="lead m-0 mt-mb-auto">1</p>
+                                <button class="btn btn-primary">-</button>
+                            </div>
+                        </div>
+                        <p class="lead text-success">
+                            Correct answer!
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row g-0">
+                    <div class="col-md-4 p-3 d-flex justify-content-center">
+                        <img src="https://randomwordgenerator.com/img/picture-generator/brushes-1683134_640.jpg" class="img-fluid rounded" alt="image: card" style="max-height: 10rem">
+                    </div>
+                    <div class="col-md-8 d-flex flex-column justify-content-lg-around">
+                        <div class="card-body">
+                            <p class="card-text">Very very very important question!</p>
+                            <div class="d-flex gap-3 align-items-center">
+                                <button class="btn btn-primary">+</button>
+                                <p class="lead m-0 mt-mb-auto">1</p>
+                                <button class="btn btn-primary">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row g-0">
+                    <div class="col-md-4 p-3 d-flex justify-content-center">
+                        <img src="https://randomwordgenerator.com/img/picture-generator/brushes-1683134_640.jpg" class="img-fluid rounded" alt="image: card" style="max-height: 10rem">
+                    </div>
+                    <div class="col-md-8 d-flex flex-column justify-content-lg-around">
+                        <div class="card-body">
+                            <p class="card-text">Very very very important question!</p>
+                            <div class="d-flex gap-3 align-items-center">
+                                <button class="btn btn-primary">+</button>
+                                <p class="lead m-0 mt-mb-auto">1</p>
+                                <button class="btn btn-primary">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <form class="d-flex flex-column gap-2">
+            <div class="form-group">
+                <label class="form-label h3 lead" for="answer">Enter your answer</label>
+                <textarea class="form-control" id="answer" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" style="max-width: 10rem">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
