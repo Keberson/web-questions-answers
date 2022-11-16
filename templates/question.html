@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card p-3 gap-3">
+    {% include 'components/question_card.html' with isNotQuestionPage=False %}
+    <hr class="hr hr-blurry" />
+    <div class="d-flex flex-column px-3 gap-3">
+        <ul class="list-group border-0">
+            {% for answer in page_obj.object_list %}
+                <li class="list-group-item">
+                    {% include 'components/question_answer.html' with answer=answer %}
+                </li>
+            {% endfor %}
+        </ul>
+        {% include 'components/paginator.html' %}
+        <form class="d-flex flex-column gap-2">
+            <div class="form-group">
+                <label class="form-label h3 lead" for="answer">Enter your answer</label>
+                <textarea class="form-control" id="answer" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" style="max-width: 10rem">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

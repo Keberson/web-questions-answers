@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex align-items-center gap-5">
+    <h2>New Questions</h2>
+    <a href="{% url 'hot' %}">Hot Questions</a>
+</div>
+<div class="mt-3">
+    {% for question in page_obj.object_list %}
+        {% include 'components/question_card.html' %}
+    {% endfor %}
+</div>
+{% include 'components/paginator.html' %}
+{% endblock %}
