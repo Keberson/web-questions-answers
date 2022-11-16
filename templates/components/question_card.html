@@ -6,14 +6,14 @@
         <div class="col-md-7">
             <div class="card-body">
                 <a href="{% url 'question' question.id %}"><h5 class="card-title">{{ question.title }}</h5></a>
-                <p class="card-text">{{ question.text }}</p>
+                <p class="card-text">{{ question.body }}</p>
                 <div class="row gap-3">
                     {% if isNotQuestionPage %}
                         <a href="#">answers ({{ question.answers }})</a>
                     {% endif %}
                     <div class="d-flex gap-1">
                         <p class="card-text"><small class="text-muted">Tags:</small></p>
-                        {% for tag in question.tags %}
+                        {% for tag in question.tags.all %}
                             <a href="{% url 'tag' tag %}" class="card-text"><small>{{ tag }}</small></a>
                         {% endfor %}
                     </div>
