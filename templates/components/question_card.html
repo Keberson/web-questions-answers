@@ -1,0 +1,31 @@
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://randomwordgenerator.com/img/picture-generator/brushes-1683134_640.jpg" class="img-fluid rounded-start" alt="image: card">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <a href="{% url 'question' question.id %}"><h5 class="card-title">{{ question.title }}</h5></a>
+                <p class="card-text">{{ question.text }}</p>
+                <div class="row gap-3">
+                    {% if isNotQuestionPage %}
+                        <a href="#">answers ({{ question.answers }})</a>
+                    {% endif %}
+                    <div class="d-flex gap-1">
+                        <p class="card-text"><small class="text-muted">Tags:</small></p>
+                        {% for tag in question.tags %}
+                            <a href="{% url 'tag' tag %}" class="card-text"><small>{{ tag }}</small></a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 btn-group">
+            <input type="checkbox" class="btn-check" id="like_{{ question.id }}" autocomplete="off">
+            <label class="btn btn-outline-danger rounded-0 rounded-end fs-2" for="like_{{ question.id }}" id="like_{{ question.id }}-label">
+                &#9825;
+                {{ question.likes }}
+            </label>
+        </div>
+    </div>
+</div>

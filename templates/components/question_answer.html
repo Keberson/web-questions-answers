@@ -1,0 +1,22 @@
+<div class="row g-0">
+    <div class="col-md-4 p-3 d-flex justify-content-center">
+        <img src="https://randomwordgenerator.com/img/picture-generator/brushes-1683134_640.jpg"
+             class="img-fluid rounded" alt="image: card" style="max-height: 10rem">
+    </div>
+    <div class="col-md-8 d-flex flex-column justify-content-lg-around">
+        <div class="card-body">
+            <h4>{{ answer.name }}</h4>
+            <p class="card-text">{{ answer.text }}</p>
+            <div class="d-flex gap-3 align-items-center">
+                <button class="btn btn-primary">+</button>
+                <p class="lead m-0 mt-mb-auto">{{ answer.likes }}</p>
+                <button class="btn btn-primary">-</button>
+            </div>
+        </div>
+        {% if answer.isCorrect %}
+            <p class="lead text-success">
+                Correct answer!
+            </p>
+        {% endif %}
+    </div>
+</div>
