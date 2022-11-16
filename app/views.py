@@ -81,7 +81,7 @@ def question_handler(request, **kwargs):
 
     }
 
-    return render(request, 'question.html', {'question': question, 'page_obj': paginate(answers, request, 5)})
+    return render(request, 'question.html', {'question': question, 'page_obj': paginate(answers, request, 30)})
 
 
 def login_handler(request):
